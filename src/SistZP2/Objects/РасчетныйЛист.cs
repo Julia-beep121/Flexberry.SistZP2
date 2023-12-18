@@ -390,7 +390,6 @@ namespace IIS.SistZP2
         public virtual void Отправить()
         {
             // *** Start programmer edit section *** (РасчетныйЛист.Отправить method implementation)
-
             return;
             // *** End programmer edit section *** (РасчетныйЛист.Отправить method implementation)
         }
@@ -402,7 +401,6 @@ namespace IIS.SistZP2
         public virtual void Распечатать()
         {
             // *** Start programmer edit section *** (РасчетныйЛист.Распечатать method implementation)
-
             return;
             // *** End programmer edit section *** (РасчетныйЛист.Распечатать method implementation)
         }
@@ -414,7 +412,6 @@ namespace IIS.SistZP2
         public virtual void Скачать()
         {
             // *** Start programmer edit section *** (РасчетныйЛист.Скачать method implementation)
-
             return;
             // *** End programmer edit section *** (РасчетныйЛист.Скачать method implementation)
         }

@@ -104,6 +104,42 @@ $.extend(true, translations, {
           caption: 'Главная',
           title: ''
         },
+        организация: {
+          caption: 'Организация',
+          title: 'Организация',
+          'i-i-s-sist-z-p2-должности-l': {
+            caption: 'Должности',
+            title: ''
+          },
+          'i-i-s-sist-z-p2-организации-l': {
+            caption: 'Организации',
+            title: ''
+          },
+          'i-i-s-sist-z-p2-сотрудники-l': {
+            caption: 'Сотрудники',
+            title: ''
+          },
+          'i-i-s-sist-z-p2-отделы-l': {
+            caption: 'Отделы',
+            title: ''
+          }
+        },
+        зарплата: {
+          caption: 'Зарплата',
+          title: 'Зарплата',
+          'i-i-s-sist-z-p2-сотрудники-l': {
+            caption: 'Сотрудники',
+            title: 'Сотрудники'
+          },
+          'i-i-s-sist-z-p2-расчетный-лист-l': {
+            caption: 'Расчетный лист ',
+            title: 'Расчетный лист'
+          },
+          'i-i-s-sist-z-p2-учет-рабоч-вр-l': {
+            caption: 'Учет рабочего времени',
+            title: 'Учет рабочего времени'
+          }
+        },
         'sist-z-p2': {
           caption: 'SistZP2',
           title: 'SistZP2',
