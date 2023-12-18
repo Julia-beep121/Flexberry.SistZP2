@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sist-z-p2-организации-e",
+  "editForm": "i-i-s-sist-z-p2-организации-e",
+  "external": false,
+  "caption": "Организации",
+  "name": "IISSistZP2ОрганизацииL",
+  "className": "ОрганизацииL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sist-z-p2-организации",
+      "modelProjection": "ОрганизацииL"
+    }
+  ]
+}

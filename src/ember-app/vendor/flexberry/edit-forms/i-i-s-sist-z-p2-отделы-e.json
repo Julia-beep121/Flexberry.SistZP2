@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Отделы",
+  "name": "IISSistZP2ОтделыE",
+  "className": "ОтделыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sist-z-p2-отделы",
+      "modelProjection": "ОтделыE"
+    }
+  ]
+}

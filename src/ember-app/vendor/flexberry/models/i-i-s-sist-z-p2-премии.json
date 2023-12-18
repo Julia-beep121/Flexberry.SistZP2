@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISSistZP2Премии",
+  "modelName": "i-i-s-sist-z-p2-премии",
+  "className": "Премии",
+  "nameSpace": "IIS.SistZP2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "критерий",
+      "type": "i-i-s-sist-z-p2-критер-прем",
+      "flexberryType": "КритерПрем",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетныйЛист",
+      "relatedTo": "i-i-s-sist-z-p2-расчетный-лист",
+      "inverse": "премии"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПремииE",
+      "modelName": "i-i-s-sist-z-p2-премии",
+      "attrs": [
+        {
+          "name": "критерий",
+          "caption": "Критерий",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

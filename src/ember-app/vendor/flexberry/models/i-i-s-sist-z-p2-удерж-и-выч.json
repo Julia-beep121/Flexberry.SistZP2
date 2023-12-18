@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISSistZP2УдержИВыч",
+  "modelName": "i-i-s-sist-z-p2-удерж-и-выч",
+  "className": "УдержИВыч",
+  "nameSpace": "IIS.SistZP2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "название",
+      "type": "i-i-s-sist-z-p2-вычет",
+      "flexberryType": "Вычет",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетныйЛист",
+      "relatedTo": "i-i-s-sist-z-p2-расчетный-лист",
+      "inverse": "удержИВыч"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "УдержИВычE",
+      "modelName": "i-i-s-sist-z-p2-удерж-и-выч",
+      "attrs": [
+        {
+          "name": "название",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

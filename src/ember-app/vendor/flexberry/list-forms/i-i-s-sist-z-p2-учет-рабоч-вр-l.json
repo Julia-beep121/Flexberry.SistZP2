@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sist-z-p2-учет-рабоч-вр-e",
+  "editForm": "i-i-s-sist-z-p2-учет-рабоч-вр-e",
+  "external": false,
+  "caption": "Учет рабоч вр",
+  "name": "IISSistZP2УчетРабочВрL",
+  "className": "УчетРабочВрL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sist-z-p2-учет-рабоч-вр",
+      "modelProjection": "УчетРабочВрL"
+    }
+  ]
+}

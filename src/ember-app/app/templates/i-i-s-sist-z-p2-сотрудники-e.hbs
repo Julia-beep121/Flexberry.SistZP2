@@ -1,0 +1,141 @@
+<h3 class="ui header">{{t "forms.i-i-s-sist-z-p2-сотрудники-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.код
+      class=(if (v-get validationModel "код" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-сотрудники-e.код-caption")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-код=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "код" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фИО
+      class=(if (v-get validationModel "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-сотрудники-e.фИО-caption")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-фИО=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фИО" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.рабТел
+      class=(if (v-get validationModel "рабТел" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-сотрудники-e.рабТел-caption")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-рабТел=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "рабТел" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.почта
+      class=(if (v-get validationModel "почта" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-сотрудники-e.почта-caption")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-почта=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "почта" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.оклад
+      class=(if (v-get validationModel "оклад" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-сотрудники-e.оклад-caption")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-оклад=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оклад" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.процСтавка
+      class=(if (v-get validationModel "процСтавка" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-сотрудники-e.процСтавка-caption")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-процСтавка=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "процСтавка" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-сотрудники-e.должности-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.должности
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="должности"
+      projection="ДолжностиL"
+      title=(t "forms.i-i-s-sist-z-p2-сотрудники-e.должности-caption")
+      readonly=readonly
+      componentName="должностиLookup"
+      class=(if (v-get validationModel "должности" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-должности=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "должности" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-сотрудники-e.отделы-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.отделы
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="отделы"
+      projection="ОтделыL"
+      title=(t "forms.i-i-s-sist-z-p2-сотрудники-e.отделы-caption")
+      readonly=readonly
+      componentName="отделыLookup"
+      class=(if (v-get validationModel "отделы" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-отделы=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отделы" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-сотрудники-e.организации-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.организации
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="организации"
+      projection="ОрганизацииL"
+      title=(t "forms.i-i-s-sist-z-p2-сотрудники-e.организации-caption")
+      readonly=readonly
+      componentName="организацииLookup"
+      class=(if (v-get validationModel "организации" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-сотрудники-e-организации=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "организации" "message")}}
+  </div>
+</form>

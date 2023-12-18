@@ -1,0 +1,143 @@
+<h3 class="ui header">{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерДок
+      class=(if (v-get validationModel "номерДок" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-расчетный-лист-e.номерДок-caption")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-номерДок=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерДок" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.датаНачПер-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаНачПер
+      class=(if (v-get validationModel "датаНачПер" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-датаНачПер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаНачПер" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.датаОкончПер-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОкончПер
+      class=(if (v-get validationModel "датаОкончПер" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-датаОкончПер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОкончПер" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.общаяСумма
+      class=(if (v-get validationModel "общаяСумма" "isInvalid") "error")
+      label=(t "forms.i-i-s-sist-z-p2-расчетный-лист-e.общаяСумма-caption")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-общаяСумма=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "общаяСумма" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-sist-z-p2-расчетный-лист-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.больнЛист-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="больнЛистGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.больнЛист
+      content=model.больнЛист
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "больнЛист" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-больнЛист=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "больнЛист" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.отпуск-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="отпускGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.отпуск
+      content=model.отпуск
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "отпуск" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-отпуск=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отпуск" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.премии-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="премииGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.премии
+      content=model.премии
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "премии" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-премии=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "премии" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sist-z-p2-расчетный-лист-e.удержИВыч-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="удержИВычGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.удержИВыч
+      content=model.удержИВыч
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "удержИВыч" "isInvalid") "error")
+      data-test-i-i-s-sist-z-p2-расчетный-лист-e-удержИВыч=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "удержИВыч" "message")}}
+  </div>
+</form>

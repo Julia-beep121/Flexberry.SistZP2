@@ -1,0 +1,234 @@
+﻿{
+  "name": "IISSistZP2РасчетныйЛист",
+  "modelName": "i-i-s-sist-z-p2-расчетный-лист",
+  "className": "РасчетныйЛист",
+  "nameSpace": "IIS.SistZP2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачПер",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОкончПер",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "общаяСумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-sist-z-p2-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "больнЛист",
+      "relatedTo": "i-i-s-sist-z-p2-больн-лист",
+      "inverse": "расчетныйЛист"
+    },
+    {
+      "name": "удержИВыч",
+      "relatedTo": "i-i-s-sist-z-p2-удерж-и-выч",
+      "inverse": "расчетныйЛист"
+    },
+    {
+      "name": "отпуск",
+      "relatedTo": "i-i-s-sist-z-p2-отпуск",
+      "inverse": "расчетныйЛист"
+    },
+    {
+      "name": "премии",
+      "relatedTo": "i-i-s-sist-z-p2-премии",
+      "inverse": "расчетныйЛист"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РасчетныйЛистE",
+      "modelName": "i-i-s-sist-z-p2-расчетный-лист",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачПер",
+          "caption": "Дата начала периода",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОкончПер",
+          "caption": "Дата окончания периода",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "общаяСумма",
+          "caption": "Общая сумма",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 4,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-sist-z-p2-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "БольнЛистE",
+          "caption": "Больничный лист",
+          "name": "больнЛист",
+          "relatedTo": "i-i-s-sist-z-p2-больн-лист",
+          "inverse": null
+        },
+        {
+          "projectionName": "ОтпускE",
+          "caption": "Отпускной лист",
+          "name": "отпуск",
+          "relatedTo": "i-i-s-sist-z-p2-отпуск",
+          "inverse": null
+        },
+        {
+          "projectionName": "ПремииE",
+          "caption": "Премия",
+          "name": "премии",
+          "relatedTo": "i-i-s-sist-z-p2-премии",
+          "inverse": null
+        },
+        {
+          "projectionName": "УдержИВычE",
+          "caption": "Удержание и вычеты",
+          "name": "удержИВыч",
+          "relatedTo": "i-i-s-sist-z-p2-удерж-и-выч",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасчетныйЛистL",
+      "modelName": "i-i-s-sist-z-p2-расчетный-лист",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачПер",
+          "caption": "Дата начала периода",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОкончПер",
+          "caption": "Дата окончания периода",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "общаяСумма",
+          "caption": "Общая сумма",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 4,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-sist-z-p2-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "БольнЛистE",
+          "caption": "Больничный лист",
+          "name": "больнЛист",
+          "relatedTo": "i-i-s-sist-z-p2-больн-лист",
+          "inverse": null
+        },
+        {
+          "projectionName": "ОтпускE",
+          "caption": "Отпускной лист",
+          "name": "отпуск",
+          "relatedTo": "i-i-s-sist-z-p2-отпуск",
+          "inverse": null
+        },
+        {
+          "projectionName": "ПремииE",
+          "caption": "Премия",
+          "name": "премии",
+          "relatedTo": "i-i-s-sist-z-p2-премии",
+          "inverse": null
+        },
+        {
+          "projectionName": "УдержИВычE",
+          "caption": "Удержание и вычеты",
+          "name": "удержИВыч",
+          "relatedTo": "i-i-s-sist-z-p2-удерж-и-выч",
+          "inverse": null
+        }
+      ]
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

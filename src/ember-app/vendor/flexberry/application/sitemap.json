@@ -1,0 +1,57 @@
+﻿{
+  "applicationCaption": "Sist z p2",
+  "applicationTitle": "Sist z p2",
+  "items": [
+    {
+      "link": null,
+      "menuName": "sist-z-p2",
+      "caption": "SistZP2",
+      "title": "SistZP2",
+      "children": [
+        {
+          "link": "i-i-s-sist-z-p2-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sist-z-p2-организации-l",
+          "menuName": null,
+          "caption": "Организации",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sist-z-p2-учет-рабоч-вр-l",
+          "menuName": null,
+          "caption": "Учет рабоч вр",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sist-z-p2-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sist-z-p2-расчетный-лист-l",
+          "menuName": null,
+          "caption": "Расчетный лист",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sist-z-p2-отделы-l",
+          "menuName": null,
+          "caption": "Отделы",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

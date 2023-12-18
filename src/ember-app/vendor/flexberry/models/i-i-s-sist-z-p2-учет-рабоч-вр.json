@@ -1,0 +1,134 @@
+﻿{
+  "name": "IISSistZP2УчетРабочВр",
+  "modelName": "i-i-s-sist-z-p2-учет-рабоч-вр",
+  "className": "УчетРабочВр",
+  "nameSpace": "IIS.SistZP2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отрабЧасы",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типОтр",
+      "type": "i-i-s-sist-z-p2-тип-отраб",
+      "flexberryType": "ТипОтраб",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудники",
+      "relatedTo": "i-i-s-sist-z-p2-сотрудники",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "УчетРабочВрE",
+      "modelName": "i-i-s-sist-z-p2-учет-рабоч-вр",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "отрабЧасы",
+          "caption": "Отработанные часы",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "типОтр",
+          "caption": "Тип отработки",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 3,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-sist-z-p2-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "УчетРабочВрL",
+      "modelName": "i-i-s-sist-z-p2-учет-рабоч-вр",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "отрабЧасы",
+          "caption": "Отработанные часы",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "типОтр",
+          "caption": "Тип отработки",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 3,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-sist-z-p2-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

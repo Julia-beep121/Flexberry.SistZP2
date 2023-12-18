@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Расчетный лист",
+  "name": "IISSistZP2РасчетныйЛистE",
+  "className": "РасчетныйЛистE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sist-z-p2-расчетный-лист",
+      "modelProjection": "РасчетныйЛистE"
+    }
+  ]
+}

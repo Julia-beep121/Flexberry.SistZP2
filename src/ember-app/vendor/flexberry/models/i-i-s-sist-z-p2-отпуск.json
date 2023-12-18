@@ -1,0 +1,93 @@
+﻿{
+  "name": "IISSistZP2Отпуск",
+  "modelName": "i-i-s-sist-z-p2-отпуск",
+  "className": "Отпуск",
+  "nameSpace": "IIS.SistZP2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаНачОтп",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОконОтп",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "колДней",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетныйЛист",
+      "relatedTo": "i-i-s-sist-z-p2-расчетный-лист",
+      "inverse": "отпуск"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОтпускE",
+      "modelName": "i-i-s-sist-z-p2-отпуск",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачОтп",
+          "caption": "Дата начала отпуска",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОконОтп",
+          "caption": "Дата окончания отпуска",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "колДней",
+          "caption": "Количество дней",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

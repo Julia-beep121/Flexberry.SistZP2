@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sist-z-p2-отделы-e",
+  "editForm": "i-i-s-sist-z-p2-отделы-e",
+  "external": false,
+  "caption": "Отделы",
+  "name": "IISSistZP2ОтделыL",
+  "className": "ОтделыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sist-z-p2-отделы",
+      "modelProjection": "ОтделыL"
+    }
+  ]
+}

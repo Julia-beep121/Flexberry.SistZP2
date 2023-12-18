@@ -1,0 +1,183 @@
+﻿{
+  "name": "IISSistZP2БольнЛист",
+  "modelName": "i-i-s-sist-z-p2-больн-лист",
+  "className": "БольнЛист",
+  "nameSpace": "IIS.SistZP2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "всегоНачисл",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаНачБол",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОконБол",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "заСчетРаб",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "заСчетФСС",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "колДней",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерДок",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "первичный",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "повторный",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "false",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "причина",
+      "type": "i-i-s-sist-z-p2-прич-нетр",
+      "flexberryType": "ПричНетр",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "расчетныйЛист",
+      "relatedTo": "i-i-s-sist-z-p2-расчетный-лист",
+      "inverse": "больнЛист"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "БольнЛистE",
+      "modelName": "i-i-s-sist-z-p2-больн-лист",
+      "attrs": [
+        {
+          "name": "номерДок",
+          "caption": "Номер документа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаНачБол",
+          "caption": "Дата начала больничного",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОконБол",
+          "caption": "Дата окончания больничного",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "колДней",
+          "caption": "Количество дней",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "первичный",
+          "caption": "Первичный",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "повторный",
+          "caption": "Повторный",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "причина",
+          "caption": "Причина ",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "заСчетРаб",
+          "caption": "За счет работ",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "заСчетФСС",
+          "caption": "За счет ФСС",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "всегоНачисл",
+          "caption": "Всего начислений",
+          "hidden": false,
+          "index": 9
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

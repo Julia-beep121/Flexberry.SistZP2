@@ -1,0 +1,1 @@
+docker-compose -p sistzp2-java down
